@@ -1,12 +1,11 @@
-package net.wiedekopf.groupalarmcompanion.client
+package net.wiedekopf.groupalarmcompanion.shared.client
 
 import android.content.Context
-import android.net.Uri
 import kotlinx.coroutines.flow.first
-import net.wiedekopf.groupalarmcompanion.model.Availability
-import net.wiedekopf.groupalarmcompanion.model.Organization
-import net.wiedekopf.groupalarmcompanion.model.OrganizationList
-import net.wiedekopf.groupalarmcompanion.model.UserDetails
+import net.wiedekopf.groupalarmcompanion.shared.model.Availability
+import net.wiedekopf.groupalarmcompanion.shared.model.Organization
+import net.wiedekopf.groupalarmcompanion.shared.model.OrganizationList
+import net.wiedekopf.groupalarmcompanion.shared.model.UserDetails
 import java.net.URI
 import kotlin.random.Random
 
@@ -83,6 +82,7 @@ class MockClient(
         }
     }
 
+    @Suppress("unused")
     private fun randomizeAvailability(): List<Availability> {
         val userId = getUser().id
         val orgId = getOrganizationList().organizations.first().id

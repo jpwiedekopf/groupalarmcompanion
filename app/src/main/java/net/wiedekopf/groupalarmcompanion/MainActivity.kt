@@ -12,9 +12,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import net.wiedekopf.groupalarmcompanion.client.MockClient
+import net.wiedekopf.groupalarmcompanion.screens.LoginScreenContent
+import net.wiedekopf.groupalarmcompanion.shared.client.MockClient
 import net.wiedekopf.groupalarmcompanion.screens.MainAppScreen
-import net.wiedekopf.groupalarmcompanion.settings.LoginScreenContent
 import net.wiedekopf.groupalarmcompanion.ui.theme.*
 
 class MainActivity : ComponentActivity() {

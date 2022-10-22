@@ -1,4 +1,4 @@
-package net.wiedekopf.groupalarmcompanion.model
+package net.wiedekopf.groupalarmcompanion.shared.model
 
 data class Availability(
     val userId: String,

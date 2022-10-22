@@ -26,25 +26,21 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import net.wiedekopf.groupalarmcompanion.R
-import net.wiedekopf.groupalarmcompanion.client.GroupAlarmClient
-import net.wiedekopf.groupalarmcompanion.model.Organization
-import net.wiedekopf.groupalarmcompanion.model.OrganizationList
-import net.wiedekopf.groupalarmcompanion.model.UserDetails
+import net.wiedekopf.groupalarmcompanion.shared.client.GroupAlarmClient
+import net.wiedekopf.groupalarmcompanion.shared.model.Organization
+import net.wiedekopf.groupalarmcompanion.shared.model.OrganizationList
+import net.wiedekopf.groupalarmcompanion.shared.model.UserDetails
 
 const val TAG = "MainAppScreen"
 
 @Composable
-fun ColumnScope.MainAppScreen(client: GroupAlarmClient) {
+fun MainAppScreen(client: GroupAlarmClient) {
     val organizationList by remember {
         mutableStateOf(client.getOrganizationList())
     }
     val userDetails by remember {
         mutableStateOf(client.getUser())
     }
-    val availability by remember {
-        mutableStateOf(client.getUser())
-    }
-
     UserCard(userDetails)
     OrganizationCard(organizationList)
 }

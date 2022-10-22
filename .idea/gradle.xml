@@ -11,6 +11,7 @@
           <set>
             <option value="$USER_HOME$/Dropbox/Mac (2)/Documents/repos/groupalarmcompanion" />
             <option value="$USER_HOME$/Dropbox/Mac (2)/Documents/repos/groupalarmcompanion/app" />
+            <option value="$USER_HOME$/Dropbox/Mac (2)/Documents/repos/groupalarmcompanion/shared" />
           </set>
         </option>
       </GradleProjectSettings>
