@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GroupAlarm Companion</string>
+    <string name="notifications_active">Notifications active</string>
+    <string name="notifications_disabled">Notifications disabled</string>
+    <string name="organization_name_format">%s</string>
+    <string name="organization_avatar">Organization avatar</string>
+    <string name="user_avatar">User avatar</string>
+    <string name="endpoint">Endpoint</string>
+    <string name="default_endpoint">https://app.groupalarm.com/api/v1</string>
+    <string name="reset">Reset</string>
+    <string name="personal_access_token">Personal Access Token</string>
+    <string name="save">Save</string>
+</resources>
