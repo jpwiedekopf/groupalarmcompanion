@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GroupAlarm Companion</string>
+    <string name="default_tile_label">GA Companion</string>
+</resources>
