@@ -34,3 +34,5 @@ out/
 
 ### VS Code ###
 .vscode/
+responses
+http-client.private.env.json

@@ -1,0 +1,5 @@
+### GET list of user's organization
+GET {{endpoint}}/organizations
+Personal-Access-Token: {{apiKey}}
+
+###
