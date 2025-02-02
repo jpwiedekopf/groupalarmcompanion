@@ -2,4 +2,58 @@
 GET {{endpoint}}/organizations
 Personal-Access-Token: {{apiKey}}
 
-###
+### GET list of availabability in the primary organization
+GET {{endpoint}}/organization/{{primaryOrgId}}/availability
+Personal-Access-Token: {{apiKey}}
+
+### GET user details including current availablePreference
+GET {{endpoint}}/user
+Personal-Access-Token: {{apiKey}}
+
+### GET user availabaility (global and organization)
+GET {{endpoint}}/user/availability
+Personal-Access-Token: {{apiKey}}
+
+### PUT negative global availability
+PUT {{endpoint}}/user/availability
+Personal-Access-Token: {{apiKey}}
+Content-Type: application/json
+
+{
+  "organizationID": {{globalOrgId}},
+  "preference": false,
+  "userID": {{userId}}
+}
+
+### PUT positive global availability
+PUT {{endpoint}}/user/availability
+Personal-Access-Token: {{apiKey}}
+Content-Type: application/json
+
+{
+  "organizationID": {{globalOrgId}},
+  "preference": true,
+  "userID": {{userId}}
+}
+
+### PUT negative org availability
+PUT {{endpoint}}/user/availability
+Personal-Access-Token: {{apiKey}}
+Content-Type: application/json
+
+{
+  "organizationID": {{primaryOrgId}},
+  "preference": false,
+  "userID": {{userId}}
+}
+
+### PUT positive org availability
+PUT {{endpoint}}/user/availability
+Personal-Access-Token: {{apiKey}}
+Content-Type: application/json
+
+{
+  "organizationID": {{primaryOrgId}},
+  "preference": true,
+  "userID": {{userId}}
+}

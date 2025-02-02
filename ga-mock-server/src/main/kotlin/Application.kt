@@ -15,5 +15,6 @@ fun Application.module() {
     configureHTTP()
     configureSerialization()
     configureSecurity()
-    configureRouting()
+    val dataService = DataService()
+    configureRouting(dataService)
 }
