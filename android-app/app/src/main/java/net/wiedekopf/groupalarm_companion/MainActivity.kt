@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            GroupAlarmCompanionTheme {
+            GroupAlarmCompanionTheme(dynamicColor = true) {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(
                         modifier = Modifier
@@ -62,9 +62,10 @@ class MainActivity : ComponentActivity() {
             val successExecutor = Executor {
                 Log.d(TAG, "requestAddTileService result success")
             }
-            val manager = application.getSystemService<StatusBarManager>()
-            manager?.requestAddTileService(
-                ComponentName.createRelative("quicksettings", "QsTileService"),
+            val manager = getSystemService(StatusBarManager::class.java)
+            Log.i(TAG, "Manager: $manager")
+            manager.requestAddTileService(
+                ComponentName(this, "QsTileService"),
                 "Title label",
                 Icon.createWithResource(this, R.drawable.ic_android_black_24dp),
                 successExecutor
@@ -82,12 +83,4 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!", modifier = modifier
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    GroupAlarmCompanionTheme {
-        Greeting("Android")
-    }
 }

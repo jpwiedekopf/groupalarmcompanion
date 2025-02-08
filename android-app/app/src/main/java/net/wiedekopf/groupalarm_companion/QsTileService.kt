@@ -1,4 +1,4 @@
-package net.wiedekopf.groupalarm_companion.quicksettings
+package net.wiedekopf.groupalarm_companion
 
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
