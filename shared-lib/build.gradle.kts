@@ -23,6 +23,7 @@ repositories {
 dependencies {
     implementation(libs.common.kotlinx.datetime)
     implementation(libs.common.kotlinx.serialization.json)
+    implementation(libs.common.ktor.client.core)
 }
 
 tasks.named<Test>("test") {

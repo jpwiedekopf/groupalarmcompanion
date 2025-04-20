@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.plugin.serialization)
 }
 
 repositories {
@@ -63,8 +64,10 @@ dependencies {
     debugImplementation(libs.android.androidx.ui.tooling)
     debugImplementation(libs.android.androidx.ui.test.manifest)
 
-    implementation(libs.android.ktor.client.core)
+    implementation(libs.common.ktor.client.core)
     implementation(libs.android.ktor.client.android)
     implementation(libs.android.androidx.navigation)
     implementation(libs.android.androidx.datastore)
+
+    implementation(project(":shared-lib"))
 }

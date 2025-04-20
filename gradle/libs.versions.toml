@@ -26,6 +26,7 @@ android-ui-google-fonts = "1.7.8"
 common-junit = { group = "junit", name = "junit", version.ref = "common-junit" }
 common-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "common-kotlinx-datetime" }
 common-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "common-kotlinx-serialization" }
+common-ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "common-ktor" }
 
 android-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "android-coreKtx" }
 android-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "android-junit" }
@@ -43,7 +44,6 @@ android-androidx-material3 = { group = "androidx.compose.material3", name = "mat
 android-androidx-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "android-nav" }
 android-androidx-datastore = { module = "androidx.datastore:datastore", version.ref = "android-datastore" }
 android-ktor-client-android = { module = "io.ktor:ktor-client-android", name = "ktor-client", version.ref = "common-ktor" }
-android-ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "common-ktor" }
 android-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "android-ui-google-fonts" }
 
 mock-ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "common-ktor" }
