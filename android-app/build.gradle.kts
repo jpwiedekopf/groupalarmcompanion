@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.plugin.serialization)
+    alias(libs.plugins.protobuf)
 }
 
 repositories {
@@ -68,6 +69,14 @@ dependencies {
     implementation(libs.android.ktor.client.android)
     implementation(libs.android.androidx.navigation)
     implementation(libs.android.androidx.datastore)
+    implementation(libs.android.protobuf.javalite)
 
     implementation(project(":shared-lib"))
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:4.30.2"
+    }
+
 }

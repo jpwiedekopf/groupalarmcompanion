@@ -32,8 +32,10 @@ fun SetupScreen() {
     Scaffold(modifier = Modifier.fillMaxSize()) { appPadding ->
         val apiKey = remember { mutableStateOf("") }
         val apiEndpoint = remember { mutableStateOf(DEFAULT_GA_ENDPOINT) }
-        val uriBuilder by derivedStateOf {
-            UriBuilder(baseUrl = apiEndpoint.value)
+        val uriBuilder by remember {
+            derivedStateOf {
+                UriBuilder(baseUrl = apiEndpoint.value)
+            }
         }
         Column(
             modifier = Modifier.fillMaxSize()
@@ -116,13 +118,17 @@ private fun ApiKeyEntry(apiKey: MutableState<String>, uriBuilder: UriBuilder) {
 
 @Composable
 fun EndpointEntry(apiEndpoint: MutableState<String>, uriBuilder: UriBuilder) {
-    val validationError by derivedStateOf { uriBuilder.isValidBaseUri() }
-    val stringResourceId by derivedStateOf {
-        when (validationError) {
-            BaseUriValidationResult.Valid -> null
-            BaseUriValidationResult.MissingProtocol -> R.string.uri_missing_protocol
-            BaseUriValidationResult.NotAnUri -> R.string.uri_not_an_uri
-            BaseUriValidationResult.NoValue -> null
+    val validationError by remember {
+        derivedStateOf { uriBuilder.isValidBaseUri() }
+    }
+    val stringResourceId by remember {
+        derivedStateOf {
+            when (validationError) {
+                BaseUriValidationResult.Valid -> null
+                BaseUriValidationResult.MissingProtocol -> R.string.uri_missing_protocol
+                BaseUriValidationResult.NotAnUri -> R.string.uri_not_an_uri
+                BaseUriValidationResult.NoValue -> null
+            }
         }
     }
     OutlinedTextField(
